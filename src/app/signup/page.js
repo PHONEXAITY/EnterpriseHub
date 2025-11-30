@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { registerUser, loginUser } from "@/utils/auth";
 import { useAuth } from "@/components/auth/AuthProvider";
-import ScrollAnimation from "@/components/animations/ScrollAnimation";
+import { motion } from "framer-motion";
+import ScrollReveal from "@/components/animations/ScrollReveal";
 
 export default function Signup() {
   const router = useRouter();
@@ -86,7 +87,7 @@ export default function Signup() {
       </div>
 
       <div className="relative w-full max-w-md">
-        <ScrollAnimation animationType="fadeInUp">
+        <ScrollReveal delay={0.2} direction="up">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20 p-6 sm:p-10">
             {/* Logo/Header */}
             <div className="text-center mb-8">
@@ -230,7 +231,7 @@ export default function Signup() {
               </p>
             </div>
           </div>
-        </ScrollAnimation>
+        </ScrollReveal>
       </div>
     </div>
   );
