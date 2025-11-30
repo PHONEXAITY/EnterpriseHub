@@ -188,7 +188,11 @@ export default function Home() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <StaggerItem>
-              <div className="group bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
+              <motion.div 
+                className="group bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-xl hover:border-blue-300 transition-all duration-300"
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -385,7 +389,11 @@ export default function Home() {
           
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <StaggerItem>
-              <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all transform hover:scale-105">
+              <motion.div 
+                className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all"
+                whileHover={{ scale: 1.05, borderColor: "#3B82F6" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="text-5xl md:text-6xl font-bold text-blue-400 mb-3 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                   10K+
                 </div>
